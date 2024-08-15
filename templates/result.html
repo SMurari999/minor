@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Prediction Result | Waste Classifier{% endblock %}
+
+{% block content %}
+<h1 class="text-2xl font-bold mb-4">Prediction Result</h1>
+<img src="{{ url_for('static', filename='uploads/'+image_path.split('/')[-1]) }}" alt="Uploaded Image" class="rounded-lg mb-4">
+<h2 class="text-xl">This looks like: <span class="font-bold text-indigo-600">{{ prediction1 }} {{prediction2}}</span></h2>
+<a href="/" class="mt-4 inline-block bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700">Try Another Image</a>
+{% endblock %}
