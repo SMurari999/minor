@@ -50,7 +50,7 @@ def index():
             img = img.resize((180, 180))
             img.save(file_path)
 
-            predicted_class,predicted_class2,predicted_class3 = predict_image(file_path)
+            predicted_class,predicted_class2 = predict_image(file_path)
             return render_template('result.html', image_path=file_path, prediction1=predicted_class,prediction2=predicted_class2)
     return render_template('index.html')
 
